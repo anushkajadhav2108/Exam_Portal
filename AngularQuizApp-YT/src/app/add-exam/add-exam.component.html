@@ -13,7 +13,7 @@
             class="form-control"
             placeholder="course Name"
           />
-      <span *ngIf="AddExamForm.hasError('required','name') && AddExamForm.controls['name'].dirty" style="color: red;">*CourseName is required</span>
+      <span *ngIf="AddExamForm.hasError('required','courseName') && AddExamForm.controls['courseName'].dirty" style="color: red;">*CourseName is required</span>
 
         </div>
 
@@ -25,7 +25,7 @@
             class="form-control"
             placeholder="Price"
           />
-      <span *ngIf="AddExamForm.hasError('required','price') && AddExamForm.controls['price'].dirty" style="color: red;">*Price is required</span>
+      <span *ngIf="AddExamForm.hasError('required','topicName') && AddExamForm.controls['topicName'].dirty" style="color: red;">*topic name is required</span>
 
         </div>
         
@@ -37,7 +37,7 @@
           class="form-control" 
           placeholder="Color"
           />
-          <span *ngIf="AddExamForm.hasError('required','color') && AddExamForm.controls['color'].dirty" style="color: red;">*Color is required</span>
+          <span *ngIf="AddExamForm.hasError('required','examType') && AddExamForm.controls['examType'].dirty" style="color: red;">*Color is required</span>
           
         </div>
   
@@ -50,7 +50,7 @@
           class="form-control"
           placeholder="Category"
         />
-      <span *ngIf="AddExamForm.hasError('required','category') && AddExamForm.controls['category'].dirty" style="color: red;">*Category is required</span>
+      <span *ngIf="AddExamForm.hasError('required','totalQuestions') && AddExamForm.controls['totalQuestions'].dirty" style="color: red;">*Category is required</span>
 
       </div>
       <div class="form-group">
@@ -61,21 +61,10 @@
           class="form-control"
           placeholder="Description"
         />
-      <span *ngIf="AddExamForm.hasError('required','description') && AddExamForm.controls['description'].dirty" style="color: red;">*Description is required</span>
+      <span *ngIf="AddExamForm.hasError('required','startDate') && AddExamForm.controls['startDate'].dirty" style="color: red;">*Description is required</span>
 
       </div>
-      <div class="row">
-        <div class="col">
-          <label for="formFile" class="form-label">Image</label>
-          <input
-            formControlName="image"
-            type="file"
-            id="formFile"
-            class="form-control"
-            placeholder="Image"
-          />
-        </div>
-      </div>
+
 
     <div class="add-btn">
       <button (click)="createExam()" [disabled]="AddExamForm.invalid"   type="submit" class="btn btn-primary">Add</button>

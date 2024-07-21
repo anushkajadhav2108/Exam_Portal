@@ -18,7 +18,7 @@ export class AddExamComponent implements OnInit {
     private http: HttpClient,
     private router: Router,
     private fb: FormBuilder,
-    private addExamService: AddExamService // Add this line to inject the service
+    private as: AddExamService // Add this line to inject the service
   ) {}
 
   ngOnInit(): void {
@@ -33,7 +33,7 @@ export class AddExamComponent implements OnInit {
 
   createExam(): void {
     console.log(this.AddExamForm.value);
-    this.addExamService.addExamService(this.AddExamForm.value).subscribe({
+    this.as.addExamService(this.AddExamForm.value).subscribe({
       next: (res: any) => {
         console.log(res);
       },

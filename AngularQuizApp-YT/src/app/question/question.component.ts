@@ -101,6 +101,5 @@ export class QuestionComponent implements OnInit {
   getProgressPercent() {
     this.progress = ((this.currentQuestion / this.questionList.length) * 100).toString();
     return this.progress;
-
   }
 }
